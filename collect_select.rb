@@ -11,23 +11,26 @@ def my_collect(array)
 	array_1
 end
  
-array2 = [1,2,3]
-puts my_collect(array2){|element| element + 1}
-puts array2
+#array2 = [1,2,3]
+#puts my_collect(array2){|element| element + 1}
+#puts array2
 
 
 def my_select(array)
+	i = 0
 	array_select = []
-		i = 0
-		while i < num
-			number = yield array[i]
-			if number == true
-			i += 1
-			array_select << number
+	while i < array.length
+		number = yield array[i]
+		if number == true
+			array_select << array[i]
 		end
+			i += 1
+		end
+		array_select
 	end
 
-
+#array3 = [1,2,3,4,5,6,7]
+#my_select(array3) {|element| element < 4}
 
 
 #end
